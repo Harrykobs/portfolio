@@ -1,0 +1,154 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Light Blue background */
+    color: #333; /* Dark text color */
+}
+
+header {
+    background-color: #1e90ff; /* Darker Blue */
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Increased box shadow */
+}
+
+nav {
+    background-color: #333;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    padding: 0.5rem 0;
+    overflow: visible; /* Allow overflow to be visible */
+    position: relative; /* Ensure positioning context for absolute elements */
+    z-index: 100; /* Ensure it appears above other content */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f8eb5f; /* Yellow text color */
+    font-weight: bold;
+    padding: 14px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+nav ul li:hover {
+    background-color: #555; /* Darker hover background */
+}
+
+nav ul li a:hover {
+    background-color: #f8eb5f; /* Yellow background on hover */
+    color: #1e90ff; /* Darker Blue text on hover */
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 0;
+    border-radius: 0 0 10px 10px;
+    z-index: 101; /* Ensure dropdown is above other content */
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 0;
+}
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+.main-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    z-index: 1; /* Ensure it doesn't overlap with nav */
+}
+
+.professional-photo {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    margin-left: 1.5rem;
+}
+
+h2 {
+    color: #1e90ff;
+}
+
+/* Reset default list styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Increased min width */
+    gap: 20px;
+}
+
+.photo-gallery li {
+    margin-bottom: 30px;
+}
+
+.photo-gallery figure {
+    text-align: center;
+}
+
+.photo-gallery img {
+    width: 100%; /* Ensure images take full width of their container */
+    height: auto;
+    border-radius: 8px;
+}
+
+.photo-gallery figcaption {
+    margin-top: 10px;
+    font-style: italic;
+    color: #666;
+}
+
+.content-with-photo {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.professional-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover;
+}
